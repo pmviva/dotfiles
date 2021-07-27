@@ -1,0 +1,5 @@
+# NPM configuration file
+
+audit        = false  # Disable audit
+loglevel     = error  # Disable log except error
+package-lock = false  # Disable package lock

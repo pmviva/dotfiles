@@ -1,0 +1,7 @@
+# Git configuration file
+
+[user]
+	name = Pablo Martin Viva
+	email = pmviva@gmail.com
+[push]
+	default = simple
