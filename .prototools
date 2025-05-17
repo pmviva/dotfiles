@@ -1,0 +1,15 @@
+###
+# PROTOTOOLS CONFIGURATION FILE
+###
+
+###
+# CONFIGURES THE PLUGINS
+###
+[plugins]
+gh = "https://raw.githubusercontent.com/appthrust/proto-toml-plugins/main/gh/plugin.toml"
+
+###
+# CONFIGURES THE SETTINGS
+###
+[settings]
+auto-install = true

@@ -1,0 +1,18 @@
+{
+  "editor.fontFamily": "'Monaspace Radon', 'Droid Sans Mono', 'monospace', monospace",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "licenser.author": "Pablo Martin Viva",
+  "licenser.license": "MIT",
+  "licenser.useSingleLineStyle": false
+}
