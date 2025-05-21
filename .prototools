@@ -1,0 +1,27 @@
+###
+# PROTOTOOLS CONFIGURATION FILE
+###
+
+###
+# CONFIGURES THE PLUGINS
+###
+[plugins]
+gh = "https://raw.githubusercontent.com/appthrust/proto-toml-plugins/main/gh/plugin.toml"
+
+###
+# CONFIGURES THE TOOL NODE
+###
+[tools.node]
+bundled-npm = true
+
+###
+# CONFIGURES THE TOOL NPM
+###
+[tools.npm]
+shared-globals-dir = true
+
+###
+# CONFIGURES THE SETTINGS
+###
+[settings]
+auto-install = true

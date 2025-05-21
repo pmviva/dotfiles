@@ -1,0 +1,42 @@
+###
+# STOW LOCAL IGNORE CONFIGURATION FILE
+###
+
+###
+# IGNORES THE COMMITLINT FILES
+###
+commitlint.config.js
+
+###
+# IGNORES THE EDITORCONFIG FILES
+###
+\.editorconfig
+
+###
+# IGNORES THE GIT FILES
+###
+\.git
+\.gitignore
+\.gitmodules
+
+###
+# IGNORES THE LEFTHOOK FILES
+###
+lefthook.yml
+
+###
+# IGNORES THE LICENSE FILES
+###
+LICENSE.md
+
+###
+# IGNORES THE NODE FILES
+###
+node_modules
+package.json
+package-lock.json
+
+###
+# IGNORES THE README FILES
+###
+README.md
