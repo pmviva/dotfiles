@@ -41,7 +41,9 @@ unset rc
 # INITIALIZES PROTO
 ###
 export PROTO_DIR="$HOME/.proto";
-export PATH="$PROTO_DIR/shims:$PROTO_DIR/bin:$PROTO_DIR/tools/node/globals/bin:$PATH";
+if ! [[ "$PATH" =~ "$PROTO_DIR/shims:$PROTO_DIR/bin:$PROTO_DIR/tools/node/globals/bin:" ]]; then
+    export PATH="$PROTO_DIR/shims:$PROTO_DIR/bin:$PROTO_DIR/tools/node/globals/bin:$PATH";
+fi
 
 ###
 # INITIALIZES SDKMAN
