@@ -1,0 +1,28 @@
+###
+# GITCONFIG CONFIGURATION FILE
+###
+
+###
+# CONFIGURES THE CORE SECTION
+###
+[core]
+	editor = vim
+
+###
+# CONFIGURES THE CREDENTIAL SECTION
+###
+[credential]
+	helper = cache
+
+###
+# CONFIGURES THE PUSH SECTION
+###
+[push]
+  default = simple
+
+###
+# CONFIGURES THE USER SECTION
+###
+[user]
+  name = Pablo Martin Viva
+  email = pmviva@gmail.com

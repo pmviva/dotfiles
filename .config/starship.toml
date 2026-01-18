@@ -1,0 +1,677 @@
+###
+# STARSHIP CONFIGURATION FILE
+###
+
+###
+# CONFIGURES THE STARSHIP SCHEMA
+###
+"$schema" = 'https://starship.rs/config-schema.json'
+
+###
+# CONFIGURES THE ADD NEWLINE PROPERTY
+###
+add_newline = true
+
+###
+# CONFIGURES THE FORMAT PROPERTY
+###
+format = """
+[╭](fg:current_line)\
+$os\
+$directory\
+$fossil_branch\
+$git_branch\
+$git_commit\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$vcsh\
+$fill\
+$package\
+$bun\
+$c\
+$cmake\
+$cobol\
+$crystal\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$gleam\
+$golang\
+$gradle\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$mojo\
+$nim\
+$nodejs\
+$ocaml\
+$odin\
+$perl\
+$php\
+$purescript\
+$python\
+$quarto\
+$raku\
+$red\
+$rlang\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$typst\
+$vlang\
+$zig\
+$fill\
+$shell\
+$time\
+$username\
+$line_break\
+[╰─](fg:current_line)\
+$character
+"""
+
+###
+# CONFIGURES THE PALETTE PROPERTY
+###
+palette = 'transition1'
+
+###
+# CONFIGURES THE BLUE PALETTE PROPERTY
+###
+[palettes.blue]
+background   = '#282A36'  # CHARCOAL NIGHT
+box          = '#44475A'  # SLATE GRAY
+color1       = '#B3CDE0'  # MISTY SKY BLUE
+color2       = '#64B5F6'  # CLEAR DAYLIGHT
+color3       = '#42A5F5'  # BLUE BEAM
+color4       = '#1E88E5'  # MEDIUM OCEAN
+color5       = '#1565C0'  # DEEP BLUE CORE
+color6       = '#0D47A1'  # MIDNIGHT BLUE
+color7       = '#1A237E'  # INKY NIGHT INDIGO
+current_line = '#44475A'  # SLATE GRAY
+error        = '#FF5252'  # BRIGHT CORAL RED
+foreground   = '#F8F8F2'  # GHOST WHITE
+primary      = '#1E1F29'  # OBSIDIAN
+success      = '#26D07C'  # BALANCED COOL GREEN
+
+###
+# CONFIGURES THE GREEN PALETTE PROPERTY
+###
+[palettes.green]
+background   = '#282A36'  # CHARCOAL NIGHT
+box          = '#44475A'  # SLATE GRAY
+color1       = '#B9F6CA'  # MINT ICE
+color2       = '#69F0AE'  # FRESH LEAF
+color3       = '#00E676'  # COOL MINT
+color4       = '#00C853'  # VIBRANT EMERALD
+color5       = '#43A047'  # GARDEN GREEN
+color6       = '#2E7D32'  # VERDANT FOREST
+color7       = '#1B5E20'  # DEEP GROVE
+current_line = '#44475A'  # SLATE GRAY
+error        = '#EF5350'  # BALANCED CORAL
+foreground   = '#F8F8F2'  # GHOST WHITE
+primary      = '#1E1F29'  # OBSIDIAN
+success      = '#00C853'  # REINFORCED VIBRANT EMERALD
+
+###
+# CONFIGURES THE RED PALETTE PROPERTY
+###
+[palettes.red]
+background   = '#282A36'  # CHARCOAL NIGHT
+box          = '#44475A'  # SLATE GRAY
+color1       = '#F8BBD0'  # SOFT BLUSH
+color2       = '#F48FB1'  # ROSE TINT
+color3       = '#EC407A'  # RADIANT RASPBERRY
+color4       = '#E53935'  # SCARLET EMBER
+color5       = '#D32F2F'  # RUSTED RED
+color6       = '#C62828'  # DEEP CHERRY
+color7       = '#B71C1C'  # CRIMSON HEAT
+current_line = '#44475A'  # SLATE GRAY
+error        = '#C51162'  # RICH CRIMSON
+foreground   = '#F8F8F2'  # GHOST WHITE
+primary      = '#1E1F29'  # OBSIDIAN
+success      = '#00C853'  # VIBRANT EMERALD
+
+###
+# CONFIGURES THE TRANSITION1 PALETTE PROPERTY
+###
+[palettes.transition1]
+background   = '#282A36'  # CHARCOAL NIGHT
+box          = '#44475A'  # SLATE GRAY
+color1       = '#00BFA5'  # ELECTRIC TEAL (FROM CUSTOM3)
+color2       = '#00ACC1'  # VIVID CYAN
+color3       = '#3D5AFE'  # INDIGO BURST
+color4       = '#7E57C2'  # SOFT VIOLET
+color5       = '#AB47BC'  # ORCHID POP
+color6       = '#EC407A'  # RADIANT PINK
+color7       = '#FF6E8D'  # CORAL KISS
+current_line = '#44475A'  # SLATE GRAY
+error        = '#E53935'  # SCARLET EMBER
+foreground   = '#F8F8F2'  # GHOST WHITE
+primary      = '#1E1F29'  # OBSIDIAN
+success      = '#26A69A'  # CALM AQUA
+
+###
+# CONFIGURES THE TRANSITION2 PALETTE PROPERTY
+###
+[palettes.transition2]
+background   = '#282A36'  # CHARCOAL NIGHT
+box          = '#44475A'  # SLATE GRAY
+color1       = '#F48FB1'  # SOFT BLUSH PINK
+color2       = '#BA68C8'  # LAVENDER BLOOM
+color3       = '#9C89B8'  # VIOLET SMOKE (BRIDGE TONE)
+color4       = '#00BFA5'  # ELECTRIC TEAL
+color5       = '#0097A7'  # PACIFIC CYAN
+color6       = '#5E92F3'  # SOFT AZURE
+color7       = '#3D5AFE'  # INDIGO BURST
+current_line = '#44475A'  # SLATE GRAY
+error        = '#D81B60'  # RASPBERRY SHOCK
+foreground   = '#F8F8F2'  # GHOST WHITE
+primary      = '#1E1F29'  # OBSIDIAN
+success      = '#00E5A0'  # AQUA JADE
+
+###
+# CONFIGURES THE TRANSITION3 PALETTE PROPERTY
+###
+[palettes.transition3]
+background   = '#282A36'  # CHARCOAL NIGHT
+box          = '#44475A'  # SLATE GRAY
+color1       = '#FF8A65'  # SOFT TANGERINE
+color2       = '#FF7043'  # WARM APRICOT
+color3       = '#EF5350'  # LIGHT RED (STEPPING TOWARD CENTER)
+color4       = '#C62828'  # DEEP CHERRY (CENTER)
+color5       = '#EC407A'  # RASPBERRY PINK
+color6       = '#BA68C8'  # LAVENDER BLOOM
+color7       = '#9575CD'  # DUSTY VIOLET
+current_line = '#44475A'  # SLATE GRAY
+error        = '#E53935'  # BRIGHTER SCARLET
+foreground   = '#F8F8F2'  # GHOST WHITE
+primary      = '#1E1F29'  # OBSIDIAN
+success      = '#66BB6A'  # HARMONIOUS SOFT GREEN
+
+###
+# CONFIGURES THE BUN MODULE
+###
+[bun]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE C MODULE
+###
+[c]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE CHARACTER MODULE
+###
+[character]
+error_symbol   = '[χ](bold fg:error)'
+format         = '$symbol '
+success_symbol = '[λ](bold fg:success)'
+
+###
+# CONFIGURES THE CMAKE MODULE
+###
+[cmake]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE COBOL MODULE
+###
+[cobol]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'COBOL'
+
+###
+# CONFIGURES THE CRYSTAL MODULE
+###
+[crystal]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE DAML MODULE
+###
+[daml]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'DAML'
+
+###
+# CONFIGURES THE DART MODULE
+###
+[dart]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE DENO MODULE
+###
+[deno]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE DIRECTORY MODULE
+###
+[directory]
+format            = '[─](fg:current_line)[ 󰉋 ](fg:primary bg:color2)[ $read_only$truncation_symbol$path ](fg:foreground bg:box)'
+home_symbol       = "󱂵 ~/"
+read_only         = '󰌾 '
+read_only_style   = ''
+truncation_length = 2
+truncation_symbol = '󰝰 '
+
+###
+# CONFIGURES THE DOTNET MODULE
+###
+[dotnet]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE ELIXIR MODULE
+###
+[elixir]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE ELM MODULE
+###
+[elm]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE ERLANG MODULE
+###
+[erlang]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE FENNEL MODULE
+###
+[fennel]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'FENNEL'
+
+###
+# CONFIGURES THE FILL MODULE
+###
+[fill]
+style  = 'fg:current_line'
+symbol = '─'
+
+###
+# CONFIGURES THE FOSSIL BRANCH MODULE
+###
+[fossil_branch]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color3)[ $branch ](fg:foreground bg:box)'
+symbol = '󰘬'
+
+###
+# CONFIGURES THE GIT BRANCH MODULE
+###
+[git_branch]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color3)[ $branch ](fg:foreground bg:box)'
+symbol = '󰘬'
+
+###
+# CONFIGURES THE GIT COMMIT MODULE
+###
+[git_commit]
+commit_hash_length = 4
+format             = "([─](fg:current_line)[ 󰓹 ](fg:primary bg:color3)[ $tag ](fg:foreground bg:box))([─](fg:current_line)[ 󰜘 ](fg:primary bg:color3)[ $hash ](fg:foreground bg:box))"
+only_detached      = false
+tag_disabled       = false
+tag_symbol         = ''
+
+###
+# CONFIGURES THE GIT STATUS MODULE
+###
+[git_status]
+format = '([─](fg:current_line)[ 󱓎 ](fg:primary bg:color3)[ $all_status$ahead_behind ](fg:foreground bg:box))'
+
+###
+# CONFIGURES THE GLEAM MODULE
+###
+[gleam]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'GLEAM'
+
+###
+# CONFIGURES THE GOLANG MODULE
+###
+[golang]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE GRADLE MODULE
+###
+[gradle]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE HASKELL MODULE
+###
+[haskell]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE HAXE MODULE
+###
+[haxe]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE HELM MODULE
+###
+[helm]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE HG BRANCH MODULE
+###
+[hg_branch]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color3)[ $branch(:$topic) ](fg:foreground bg:box)'
+symbol = '󰘬'
+
+###
+# CONFIGURES THE JAVA MODULE
+###
+[java]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE JULIA MODULE
+###
+[julia]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE KOTLIN MODULE
+###
+[kotlin]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE LUA MODULE
+###
+[lua]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE MOJO MODULE
+###
+[mojo]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'MOJO'
+
+###
+# CONFIGURES THE NIM MODULE
+###
+[nim]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE NODEJS MODULE
+###
+[nodejs]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE OCAML MODULE
+###
+[ocaml]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE ODIN MODULE
+###
+[odin]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'ODIN'
+
+###
+# CONFIGURES THE OS MODULE
+###
+[os]
+disabled = false
+format   = '[─](fg:current_line)[ $symbol ](fg:primary bg:color1)'
+
+###
+# CONFIGURES THE OS SYMBOLS
+###
+[os.symbols]
+AIX              = 'AIX'
+Alpaquita        = 'Alpaquita'
+AlmaLinux        = ''
+Alpine           = ''
+Amazon           = 'Amazon'
+Android          = 'Android'
+Arch             = ''
+Artix            = ''
+CachyOS          = 'CachyOS'
+CentOS           = ''
+Debian           = ''
+DragonFly        = 'Dragonfly'
+Emscripten       = 'Emscripten'
+EndeavourOS      = ''
+Fedora           = ''
+FreeBSD          = ''
+Garuda           = ''
+Gentoo           = ''
+HardenedBSD      = ''
+Illumos          = ''
+Kali             = ''
+Linux            = ''
+Mabox            = 'Mabox'
+Macos            = ''
+Manjaro          = ''
+Mariner          = 'Mariner'
+MidnightBSD      = 'MidnightBSD'
+Mint             = ''
+NetBSD           = 'NetBSD'
+NixOS            = ''
+Nobara           = ''
+OpenBSD          = ''
+OpenCloudOS      = 'OpenCloudOS'
+openEuler        = 'OpenEuler'
+openSUSE         = ''
+OracleLinux      = 'OracleLinux'
+Pop              = ''
+Raspbian         = ''
+Redhat           = ''
+RedHatEnterprise = ''
+RockyLinux       = ''
+Redox            = 'Redox'
+Solus            = ''
+SUSE             = ''
+Ubuntu           = ''
+Ultramarine      = 'Ultramarine'
+Unknown          = "Unknown"
+Uos              = 'UOS'
+Void             = ''
+Windows          = ''
+
+###
+# CONFIGURES THE PERL MODULE
+###
+[perl]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE PHP MODULE
+###
+[php]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE PIJUL CHANNEL MODULE
+###
+[pijul_channel]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color3)[ $channel ](fg:foreground bg:box)'
+symbol = '󰘬'
+
+###
+# CONFIGURES THE PURESCRIPT MODULE
+###
+[purescript]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE PYTHON MODULE
+###
+[python]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE QUARTO MODULE
+###
+[quarto]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'QUARTO'
+
+###
+# CONFIGURES THE RAKU MODULE
+###
+[raku]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'RAKU'
+
+###
+# CONFIGURES THE RED MODULE
+###
+[red]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'RED'
+
+###
+# CONFIGURES THE RLANG MODULE
+###
+[rlang]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE RUBY MODULE
+###
+[ruby]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE RUST MODULE
+###
+[rust]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE SCALA MODULE
+###
+[scala]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE SOLIDITY MODULE
+###
+[solidity]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE SWIFT MODULE
+###
+[swift]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = ''
+
+###
+# CONFIGURES THE PACKAGE MODULE
+###
+[package]
+format = '[─](fg:current_line)[ 󰏖 ](fg:primary bg:color4)[ $version ](fg:foreground bg:box)'
+
+###
+# CONFIGURES THE SHELL MODULE
+###
+[shell]
+disabled             = false
+format               = '[─](fg:current_line)[ 󰆍 ](fg:primary bg:color5)[ $indicator ](fg:foreground bg:box)'
+unknown_indicator    = 'shell'
+
+###
+# CONFIGURES THE TIME MODULE
+###
+[time]
+disabled    = false
+format      = '[─](fg:current_line)[ 󰥔 ](fg:primary bg:color6)[ $time ](fg:foreground bg:box)'
+time_format = '%H:%M'
+
+###
+# CONFIGURES THE TYPST MODULE
+###
+[typst]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'TYPST'
+
+###
+# CONFIGURES THE USERNAME MODULE
+###
+[username]
+format      = '[─](fg:current_line)[ 󰀄 ](fg:primary bg:color7)[ $user ](fg:foreground bg:box) '
+show_always = true
+
+###
+# CONFIGURES THE VCSH MODULE
+###
+[vcsh]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color3)[ $repo ](fg:foreground bg:box)'
+symbol = '󰘬'
+
+###
+# CONFIGURES THE VLANG MODULE
+###
+[vlang]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'V'
+
+###
+# CONFIGURES THE ZIG MODULE
+###
+[zig]
+format = '[─](fg:current_line)[ $symbol ](fg:primary bg:color4)([ $version ](fg:foreground bg:box))'
+symbol = 'ZIG'

@@ -1,0 +1,18 @@
+{
+  "editor.fontFamily": "'Monaspace Radon', 'Droid Sans Mono', 'monospace', monospace",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh",
+      "icon": "terminal",
+      "args": [
+        "--login"
+      ]
+    }
+  },
+  "licenser.author": "Pablo Martin Viva",
+  "licenser.license": "MIT",
+  "licenser.useSingleLineStyle": false
+}
