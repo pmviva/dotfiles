@@ -1,0 +1,80 @@
+###
+# CHEZMOIIGNORE CONFIGURATION FILE
+###
+
+{{ if ne .chezmoi.os "linux" }}
+###
+# IGNORES THE CONFIG CODE FILES
+###
+.config/Code
+{{ end }}
+
+###
+# IGNORES THE COMMITLINT FILES
+###
+commitlint.config.js
+
+###
+# IGNORES THE EDITORCONFIG FILES
+###
+.editorconfig
+
+###
+# IGNORES THE GIT FILES
+###
+.git
+.gitignore
+.gitmodules
+
+###
+# IGNORES THE LEFTHOOK FILES
+###
+lefthook.yml
+
+{{ if ne .chezmoi.os "darwin" }}
+###
+# IGNORES THE LIBRARY FILES
+###
+Library
+{{ end }}
+
+###
+# IGNORES THE LICENSE FILES
+###
+LICENSE.md
+
+###
+# IGNORES THE LOCAL SHARE FILES
+###
+{{ if ne .chezmoi.os "linux" }}
+.local.share
+{{ end }}
+
+###
+# IGNORES THE NODE FILES
+###
+node_modules
+package-lock.json
+package.json
+
+###
+# IGNORES THE README FILES
+###
+README.md
+
+{{ if or (ne .chezmoi.username "root") (eq .chezmoi.os "darwin") }}
+###
+# IGNORES THE REMOVE LOG FILES SCRIPT FOR REGULAR USERS
+###
+.local/bin/remove-log-files.sh
+{{ end }}
+
+###
+# IGNORES THE RENOVATE FILES
+###
+renovate.json
+
+###
+# IGNORES THE SHARED FOLDER
+###
+shared

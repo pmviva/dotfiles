@@ -1,0 +1,16 @@
+###
+# LEFTHOOK CONFIGURATION FILE
+###
+
+commit-msg:
+  commands:
+    commit-message-lint:
+      run: npm exec -- commitlint --color --edit {1}
+
+prepare-commit-msg:
+  commands:
+    commit-message-generate:
+      env:
+        LEFTHOOK: "0"
+      interactive: true
+      run: npm exec -- cz --hook

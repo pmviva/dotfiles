@@ -1,0 +1,86 @@
+###
+# ZSHRC CONFIGURATION FILE
+###
+
+###
+# SOURCES THE GLOBAL DEFINITIONS
+###
+if [[ -f /etc/zshrc ]]; then
+  source /etc/zshrc
+fi
+
+###
+# KEEPS PATH ENTRIES UNIQUE
+###
+typeset -U path PATH
+
+###
+# SETS THE PATH VARIABLE
+###
+path=("$HOME/.local/bin" "$HOME/bin" $path)
+export PATH
+
+###
+# UNSETS THE HISTFILE VARIABLE
+###
+unset HISTFILE
+
+###
+# SETS HIST_NO_STORE OPTION
+###
+setopt HIST_NO_STORE
+
+###
+# UNSETS NO_HIST_BEEP OPTION
+###
+unsetopt HIST_BEEP
+
+###
+# INITIALIZES COMPLETION
+###
+autoload -Uz compinit
+compinit
+
+###
+# SOURCES THE LOCAL DEFINITIONS
+###
+for RC in "$HOME"/.zshrc.d/*(N); do
+  source "$RC"
+done
+
+###
+# UNSETS THE RC VARIABLE
+###
+unset RC
+
+###
+# INITIALIZES NVM
+###
+export NVM_DIR="$HOME/.nvm"
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+  source "$NVM_DIR/nvm.sh"
+fi
+
+###
+# INITIALIZES SDKMAN
+###
+export SDKMAN_DIR="$HOME/.sdkman"
+if [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]]; then
+  source "$SDKMAN_DIR/bin/sdkman-init.sh"
+fi
+
+###
+# INITIALIZES FASTFETCH
+###
+command -v fastfetch >/dev/null 2>&1
+if [[ $? -eq 0 ]]; then
+  fastfetch
+fi
+
+###
+# INITIALIZES STARSHIP
+###
+command -v starship >/dev/null 2>&1
+if [[ $? -eq 0 ]]; then
+  eval "$(starship init zsh)"
+fi
