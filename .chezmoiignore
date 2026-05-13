@@ -1,0 +1,82 @@
+###
+# CHEZMOIIGNORE CONFIGURATION FILE
+###
+
+###
+# IGNORES THE AGENT TOOLING FILES
+###
+.atl
+AGENTS.md
+
+{{ if ne .chezmoi.os "linux" }}
+###
+# IGNORES THE LINUX-ONLY CONFIG CODE FILES
+###
+.config/Code
+{{ end }}
+
+###
+# IGNORES THE COMMITLINT FILES
+###
+commitlint.config.js
+
+###
+# IGNORES THE EDITORCONFIG FILES
+###
+.editorconfig
+
+###
+# IGNORES THE GIT FILES
+###
+.git
+.gitignore
+.gitmodules
+
+###
+# IGNORES THE LEFTHOOK FILES
+###
+lefthook.yml
+
+{{ if ne .chezmoi.os "darwin" }}
+###
+# IGNORES THE MACOS-ONLY LIBRARY FILES
+###
+Library
+{{ end }}
+
+###
+# IGNORES THE LICENSE FILES
+###
+LICENSE.md
+
+{{ if or (ne .chezmoi.username "root") (eq .chezmoi.os "darwin") }}
+###
+# IGNORES THE LINUX ROOT-ONLY LOCAL BIN FILES
+###
+.local/bin/remove-log-files.sh
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+###
+# IGNORES THE LINUX-ONLY LOCAL SHARE FILES
+###
+.local/share
+{{ end }}
+
+###
+# IGNORES THE NODE FILES
+###
+node_modules
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+###
+# IGNORES THE README FILES
+###
+README.md
+
+###
+# IGNORES THE RENOVATE FILES
+###
+renovate.json

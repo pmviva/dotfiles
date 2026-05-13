@@ -1,0 +1,27 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Bash configuration files.",
+  "homepage": "https://github.com/pmviva/dotfiles#readme",
+  "bugs": {
+    "url": "https://github.com/pmviva/dotfiles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmviva/dotfiles.git"
+  },
+  "license": "MIT",
+  "author": "Pablo Martin Viva",
+  "packageManager": "pnpm@11.1.1",
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
+    "@commitlint/prompt-cli": "^21.0.0",
+    "lefthook": "^2.1.6"
+  },
+  "scripts": {
+    "commit": "commit",
+    "postinstall": "lefthook install"
+  }
+}

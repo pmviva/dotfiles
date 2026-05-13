@@ -1,0 +1,13 @@
+###
+# GITIGNORE CONFIGURATION FILE
+###
+
+###
+# ATL FILES CONFIGURATION
+###
+.atl/
+
+###
+# NODE FILE CONFIGURATION
+###
+node_modules

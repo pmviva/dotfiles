@@ -1,0 +1,41 @@
+###
+# GITCONFIG CONFIGURATION FILE
+###
+
+###
+# CONFIGURES THE COMMIT SECTION
+###
+[commit]
+	gpgsign = true
+
+###
+# CONFIGURES THE CORE SECTION
+###
+[core]
+	editor = vim
+
+###
+# CONFIGURES THE CREDENTIAL SECTION
+###
+[credential]
+	helper = cache
+
+###
+# CONFIGURES THE INIT SECTION
+###
+[init]
+	defaultBranch = main
+
+###
+# CONFIGURES THE PUSH SECTION
+###
+[push]
+  default = simple
+
+###
+# CONFIGURES THE USER SECTION
+###
+[user]
+  email = pmviva@gmail.com
+  name = Pablo Martin Viva
+  signingkey = {{ .signingkey }}
