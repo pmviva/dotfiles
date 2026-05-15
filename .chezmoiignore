@@ -53,6 +53,7 @@ LICENSE.md
 ###
 # IGNORES THE LINUX ROOT-ONLY LOCAL BIN FILES
 ###
+.local/bin/install-neovim.sh
 .local/bin/remove-log-files.sh
 {{ end }}
 
