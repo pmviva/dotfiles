@@ -1,0 +1,8 @@
+--[[
+  MINI SPLITJOIN PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI SPLITJOIN PLUGIN
+]]
+require("mini.splitjoin").setup()

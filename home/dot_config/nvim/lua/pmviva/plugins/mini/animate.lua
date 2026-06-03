@@ -1,0 +1,8 @@
+--[[
+  MINI ANIMATE PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI ANIMATE PLUGIN
+]]
+require("mini.animate").setup()

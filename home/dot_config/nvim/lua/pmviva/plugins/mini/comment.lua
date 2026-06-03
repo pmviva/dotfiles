@@ -1,0 +1,8 @@
+--[[
+  MINI COMMENT PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI COMMENT PLUGIN
+]]
+require("mini.comment").setup()

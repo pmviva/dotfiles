@@ -1,0 +1,103 @@
+###
+# BREWFILE CONFIGURATION FILE
+###
+
+###
+# BREWS BAT
+###
+brew "bat"
+
+###
+# BREWS CHEZMOI
+###
+brew "chezmoi"
+
+###
+# BREWS DUST
+###
+brew "dust"
+
+###
+# BREWS EZA
+###
+brew "eza"
+
+###
+# BREWS FASTFETCH
+###
+brew "fastfetch"
+
+###
+# BREWS FD
+###
+brew "fd"
+
+###
+# BREWS FZF
+###
+brew "fzf"
+
+###
+# BREWS GITHUB CLI
+###
+brew "gh"
+
+###
+# BREWS LAZYDOCKER
+###
+brew "lazydocker"
+
+###
+# BREWS LAZYGIT
+###
+brew "lazygit"
+
+###
+# BREWS MIDNIGHT COMMANDER
+###
+brew "midnight-commander"
+
+###
+# BREWS NEOVIM
+###
+brew "neovim"
+
+###
+# BREWS PANDOC
+###
+brew "pandoc"
+
+###
+# BREWS PASTEL
+###
+brew "pastel"
+
+###
+# BREWS RIPGREP
+###
+brew "ripgrep"
+
+###
+# BREWS STARSHIP
+###
+brew "starship"
+
+###
+# BREWS TLRC
+###
+brew "tlrc"
+
+###
+# BREWS TMUX
+###
+brew "tmux"
+
+###
+# BREWS TREE-SITTER-CLI
+###
+brew "tree-sitter-cli"
+
+###
+# BREWS ZOXIDE
+###
+brew "zoxide"

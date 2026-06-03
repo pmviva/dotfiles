@@ -1,0 +1,8 @@
+--[[
+  MINI OPERATORS PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI OPERATORS PLUGIN
+]]
+require("mini.operators").setup()

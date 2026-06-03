@@ -1,0 +1,8 @@
+--[[
+  MINI SNIPPETS PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI SNIPPETS PLUGIN
+]]
+require("mini.snippets").setup()

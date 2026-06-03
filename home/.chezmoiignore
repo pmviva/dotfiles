@@ -1,0 +1,31 @@
+###
+# CHEZMOIIGNORE CONFIGURATION FILE
+###
+
+{{ if ne .chezmoi.os "linux" }}
+###
+# IGNORES THE LINUX-ONLY CONFIG CODE FILES
+###
+.config/Code
+{{ end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+###
+# IGNORES THE MACOS-ONLY LIBRARY FILES
+###
+Library
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+###
+# IGNORES THE LINUX ROOT-ONLY LOCAL BIN FILES
+###
+.local/bin/remove-log-files.zsh
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+###
+# IGNORES THE LINUX-ONLY LOCAL SHARE KONSOLE FILES
+###
+.local/share/konsole
+{{ end }}

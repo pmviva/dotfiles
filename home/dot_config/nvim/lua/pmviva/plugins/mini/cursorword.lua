@@ -1,0 +1,8 @@
+--[[
+  MINI CURSORWORD PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI CURSORWORD PLUGIN
+]]
+require("mini.cursorword").setup()

@@ -1,0 +1,8 @@
+--[[
+  MINI CMDLINE PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI CMDLINE PLUGIN
+]]
+require("mini.cmdline").setup()

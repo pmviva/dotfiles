@@ -1,0 +1,8 @@
+###
+# BAT CONFIGURATION FILE
+###
+
+###
+# CONFIGURES THE CATPPUCCIN MACCHIATO THEME
+###
+--theme="Catppuccin Macchiato"

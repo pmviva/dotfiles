@@ -1,0 +1,8 @@
+--[[
+  MINI BRACKETED PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI BRACKETED PLUGIN
+]]
+require("mini.bracketed").setup()

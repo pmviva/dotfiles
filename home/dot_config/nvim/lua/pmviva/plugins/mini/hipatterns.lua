@@ -1,0 +1,8 @@
+--[[
+  MINI HIPATTERNS PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI HIPATTERNS PLUGIN
+]]
+require("mini.hipatterns").setup()

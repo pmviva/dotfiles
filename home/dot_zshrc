@@ -1,0 +1,156 @@
+###
+# DEFINES THE ZINIT REPOSITORY DIRECTORY
+###
+ZINIT_REPO_DIR="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+###
+# INSTALLS ZINIT IF IT IS NOT ALREADY INSTALLED
+###
+if [[ ! -s "$ZINIT_REPO_DIR/zinit.zsh" ]]; then
+  ###
+  # CREATES THE PARENT DIRECTORY FOR THE ZINIT REPOSITORY
+  ###
+  mkdir -p "$(dirname "$ZINIT_REPO_DIR")"
+
+  ###
+  # CLONES THE ZINIT REPOSITORY
+  ###
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_REPO_DIR"
+fi
+
+###
+# INITIALIZES ZINIT
+###
+source "$ZINIT_REPO_DIR/zinit.zsh"
+
+###
+# INCLUDES A PMVIVA SNIPPET
+###
+pmviva-snippet() {
+  zinit snippet "https://raw.githubusercontent.com/pmviva/zsh-snippets/main/snippets/$1.zsh"
+}
+
+###
+# INCLUDES THE ZSH-USERS/ZSH-COMPLETIONS PLUGIN
+###
+zinit light zsh-users/zsh-completions
+
+###
+# INCLUDES THE ZSH-USERS/ZSH-AUTOSUGGESTIONS PLUGIN
+###
+zinit light zsh-users/zsh-autosuggestions
+
+###
+# INCLUDES THE OMZP COLORED MAN PAGES SNIPPET
+###
+zinit snippet OMZP::colored-man-pages
+
+###
+# INCLUDES THE OMZP COMMAND NOT FOUND SNIPPET
+###
+zinit snippet OMZP::command-not-found
+
+###
+# INCLUDES THE OMZP COMMON ALIASES SNIPPET
+###
+zinit snippet OMZP::common-aliases
+
+###
+# INCLUDES THE OMZP DOCKER SNIPPET
+###
+zinit snippet OMZP::docker
+
+###
+# INCLUDES THE OMZP DOCKER COMPOSE SNIPPET
+###
+zinit snippet OMZP::docker-compose
+
+###
+# INCLUDES THE OMZP DNF SNIPPET
+###
+zinit snippet OMZP::dnf
+
+###
+# INCLUDES THE OMZP DOTENV SNIPPET
+###
+zinit snippet OMZP::dotenv
+
+###
+# INCLUDES THE OMZP GH SNIPPET
+###
+zinit snippet OMZP::gh
+
+###
+# INCLUDES THE OMZP GIT SNIPPET
+###
+zinit snippet OMZP::git
+
+###
+# INCLUDES THE OMZP HISTORY SNIPPET
+###
+zinit snippet OMZP::history
+
+###
+# INCLUDES THE OMZP PODMAN SNIPPET
+###
+zinit snippet OMZP::podman
+
+###
+# INCLUDES THE PMVIVA PATH SNIPPET
+###
+pmviva-snippet path
+
+###
+# INCLUDES THE PMVIVA HISTORY SNIPPET
+###
+pmviva-snippet history
+
+###
+# INCLUDES THE PMVIVA AUTOCOMPLETE SNIPPET
+###
+pmviva-snippet autocomplete
+
+###
+# INCLUDES THE PMVIVA KEYBINDINGS SNIPPET
+###
+pmviva-snippet keybindings
+
+###
+# INCLUDES THE PMVIVA HOMEBREW SNIPPET
+###
+pmviva-snippet homebrew
+
+###
+# INCLUDES THE PMVIVA CARGO SNIPPET
+###
+pmviva-snippet cargo
+
+###
+# INCLUDES THE PMVIVA NVM SNIPPET
+###
+pmviva-snippet nvm
+
+###
+# INCLUDES THE PMVIVA SDKMAN! SNIPPET
+###
+pmviva-snippet sdkman
+
+###
+# INCLUDES THE PMVIVA PNPM SNIPPET
+###
+pmviva-snippet pnpm
+
+###
+# INCLUDES THE PMVIVA FASTFETCH SNIPPET
+###
+pmviva-snippet fastfetch
+
+###
+# INCLUDES THE PMVIVA STARSHIP SNIPPET
+###
+pmviva-snippet starship
+
+###
+# INCLUDES THE PMVIVA ZOXIDE SNIPPET
+###
+pmviva-snippet zoxide

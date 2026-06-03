@@ -1,0 +1,9 @@
+###
+# CHEZMOI DATA CONFIGURATION FILE
+###
+
+###
+# DEFINES THE DATA SECTION
+###
+data:
+  signingkey: {{ promptStringOnce . "signingkey" "What is your GitHub GPG signing key" }}

@@ -1,0 +1,8 @@
+--[[
+  MINI SURROUND PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI SURROUND PLUGIN
+]]
+require("mini.surround").setup()

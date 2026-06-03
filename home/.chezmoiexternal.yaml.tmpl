@@ -1,0 +1,32 @@
+###
+# CHEZMOIEXTERNAL CONFIGURATION FILE
+###
+
+###
+# REFERENCES THE BAT CATPPUCCIN MACCHIATO THEME
+###
+".config/bat/themes/Catppuccin Macchiato.tmTheme":
+  refreshPeriod: "168h"
+  type: "file"
+  url: "https://raw.githubusercontent.com/catppuccin/bat/refs/heads/main/themes/Catppuccin%20Macchiato.tmTheme"
+
+###
+# REFERENCES THE EZA CATPPUCCIN MACCHIATO THEME
+###
+{{- if eq .chezmoi.os "linux" }}
+".config/eza/theme.yml":
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
+"Library/Application Support/eza/theme.yml":
+{{- end }}
+  refreshPeriod: "168h"
+  type: "file"
+  url: "https://raw.githubusercontent.com/eza-community/eza-themes/main/themes/catppuccin-macchiato.yml"
+
+###
+# REFERENCES THE MIDNIGHT COMMANDER CATPPUCCIN THEME
+###
+".local/share/mc/skins/catppuccin.ini":
+  refreshPeriod: "168h"
+  type: "file"
+  url: "https://raw.githubusercontent.com/catppuccin/mc/main/catppuccin.ini"

@@ -1,0 +1,8 @@
+--[[
+  MINI INDENTSCOPE PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI INDENTSCOPE PLUGIN
+]]
+require("mini.indentscope").setup()

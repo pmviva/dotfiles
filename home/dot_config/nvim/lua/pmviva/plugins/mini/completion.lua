@@ -1,0 +1,8 @@
+--[[
+  MINI COMPLETION PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI COMPLETION PLUGIN
+]]
+require("mini.completion").setup()

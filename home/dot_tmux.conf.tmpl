@@ -1,0 +1,236 @@
+###
+# TMUX CONFIGURATION FILE
+###
+
+###
+# CONFIGURES THE BASE INDEX OPTION
+###
+set -g base-index 1
+
+###
+# CONFIGURES THE DEFAULT COMMAND OPTION
+###
+{{- if eq .chezmoi.os "linux" }}
+set -g default-command "/usr/bin/zsh --login"
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
+set -g default-command "/bin/zsh --login"
+{{- end }}
+
+###
+# CONFIGURES THE DEFAULT SHELL OPTION
+###
+{{- if eq .chezmoi.os "linux" }}
+set -g default-shell "/usr/bin/zsh"
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
+set -g default-shell "/bin/zsh"
+{{- end }}
+
+###
+# CONFIGURES THE DEFAULT TERMINAL OPTION
+###
+set -g default-terminal "tmux-256color"
+
+###
+# CONFIGURES THE ESCAPE TIME OPTION
+###
+set -g escape-time 0
+
+###
+# CONFIGURES THE FOCUS EVENTS OPTION
+###
+set -g focus-events on
+
+###
+# CONFIGURES THE HISTORY LIMIT OPTION
+###
+set -g history-limit 100000
+
+###
+# CONFIGURES THE MOUSE OPTION
+###
+set -g mouse on
+
+###
+# CONFIGURES THE PANE BASE INDEX OPTION
+###
+set -g pane-base-index 1
+
+###
+# CONFIGURES THE RENUMBER WINDOWS OPTION
+###
+set -g renumber-windows on
+
+###
+# CONFIGURES THE SET CLIPBOARD OPTION
+###
+set -g set-clipboard on
+
+###
+# CONFIGURES THE STATUS LEFT LENGTH OPTION
+###
+set -g status-left-length 100
+
+###
+# CONFIGURES THE STATUS RIGHT LENGTH OPTION
+###
+set -g status-right-length 100
+
+###
+# CONFIGURES THE TRUE COLOR TERMINAL OVERRIDES OPTION
+###
+set -ag terminal-overrides ",xterm-256color:RGB"
+
+###
+# CONFIGURES THE VI COPY MODE OPTION
+###
+setw -g mode-keys vi
+
+###
+# UNBINDS THE DEFAULT PREFIX KEY
+###
+unbind C-b
+
+###
+# CONFIGURES THE PREFIX KEY
+###
+set -g prefix C-a
+
+###
+# CONFIGURES THE SEND PREFIX KEYMAP
+###
+bind C-a send-prefix
+
+###
+# CONFIGURES THE LEFT PANE RESIZE KEYMAP
+###
+bind -r H resize-pane -L 5
+
+###
+# CONFIGURES THE DOWN PANE RESIZE KEYMAP
+###
+bind -r J resize-pane -D 5
+
+###
+# CONFIGURES THE UP PANE RESIZE KEYMAP
+###
+bind -r K resize-pane -U 5
+
+###
+# CONFIGURES THE RIGHT PANE RESIZE KEYMAP
+###
+bind -r L resize-pane -R 5
+
+###
+# CONFIGURES THE VERTICAL SPLIT KEYMAP
+###
+bind '"' split-window -v -c "#{pane_current_path}"
+
+###
+# CONFIGURES THE HORIZONTAL SPLIT KEYMAP
+###
+bind % split-window -h -c "#{pane_current_path}"
+
+###
+# CONFIGURES THE LEFT PANE NAVIGATION KEYMAP
+###
+bind h select-pane -L
+
+###
+# CONFIGURES THE DOWN PANE NAVIGATION KEYMAP
+###
+bind j select-pane -D
+
+###
+# CONFIGURES THE UP PANE NAVIGATION KEYMAP
+###
+bind k select-pane -U
+
+###
+# CONFIGURES THE RIGHT PANE NAVIGATION KEYMAP
+###
+bind l select-pane -R
+
+###
+# CONFIGURES THE RELOAD CONFIGURATION KEYMAP
+###
+bind r source-file ~/.tmux.conf \; display-message "Reloaded tmux configuration"
+
+###
+# CONFIGURES THE COPY MODE CANCEL KEYMAP
+###
+bind -T copy-mode-vi Escape send-keys -X cancel
+
+###
+# CONFIGURES THE COPY MODE BEGIN SELECTION KEYMAP
+###
+bind -T copy-mode-vi v send-keys -X begin-selection
+
+###
+# CONFIGURES THE COPY MODE COPY SELECTION KEYMAP
+###
+bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+###
+# CONFIGURES THE CATPPUCCIN DATE TIME TEXT OPTION
+###
+set -g @catppuccin_date_time_text "%H:%M"
+
+###
+# CONFIGURES THE CATPPUCCIN FLAVOR OPTION
+###
+set -g @catppuccin_flavor "macchiato"
+
+###
+# CONFIGURES THE CATPPUCCIN WINDOW CURRENT TEXT OPTION
+###
+set -g @catppuccin_window_current_text "#W"
+
+###
+# CONFIGURES THE CATPPUCCIN WINDOW FLAGS OPTION
+###
+set -g @catppuccin_window_flags "icon"
+
+###
+# CONFIGURES THE CATPPUCCIN WINDOW STATUS STYLE OPTION
+###
+set -g @catppuccin_window_status_style "rounded"
+
+###
+# CONFIGURES THE CATPPUCCIN WINDOW TEXT OPTION
+###
+set -g @catppuccin_window_text "#W"
+
+###
+# CONFIGURES THE TPM CATPPUCCIN PLUGIN
+###
+set -g @plugin "catppuccin/tmux"
+
+###
+# CONFIGURES THE TPM RESURRECT PLUGIN
+###
+set -g @plugin "tmux-plugins/tmux-resurrect"
+
+###
+# CONFIGURES THE TPM SENSIBLE PLUGIN
+###
+set -g @plugin "tmux-plugins/tmux-sensible"
+
+###
+# CONFIGURES THE TPM PLUGIN
+###
+set -g @plugin "tmux-plugins/tpm"
+
+###
+# INSTALLS AND INITIALIZES TPM
+###
+if-shell "[ ! -s '${HOME}/.tmux/plugins/tpm/tpm' ]" {
+  run-shell " \
+    mkdir -p '${HOME}/.tmux/plugins' && \
+    git clone https://github.com/tmux-plugins/tpm '${HOME}/.tmux/plugins/tpm' && \
+    '${HOME}/.tmux/plugins/tpm/tpm' \
+  "
+} {
+  run-shell "'${HOME}/.tmux/plugins/tpm/tpm'"
+}

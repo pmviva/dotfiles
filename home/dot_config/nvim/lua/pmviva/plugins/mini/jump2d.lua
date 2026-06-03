@@ -1,0 +1,8 @@
+--[[
+  MINI JUMP2D PLUGIN CONFIGURATION FILE
+]]
+
+--[[
+  CONFIGURES THE MINI JUMP2D PLUGIN
+]]
+require("mini.jump2d").setup()
