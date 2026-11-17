@@ -141,6 +141,11 @@ pmviva-snippet sdkman
 pmviva-snippet pnpm
 
 ###
+# INCLUDES THE PMVIVA OPENCODE SNIPPET
+###
+pmviva-snippet opencode
+
+###
 # INCLUDES THE PMVIVA FASTFETCH SNIPPET
 ###
 pmviva-snippet fastfetch

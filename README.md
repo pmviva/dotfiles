@@ -71,6 +71,12 @@ Available scripts:
 | `install-vscode-extensions.zsh` | Install the preferred VS Code extensions |
 | `remove-log-files.zsh` | Remove and truncate Linux log files |
 
+Zsh configuration:
+
+The main Zsh profile (`home/dot_zshrc`, applied to `~/.zshrc`) uses Zinit and the `pmviva-snippet` helper to load snippets from [pmviva/zsh-snippets](https://github.com/pmviva/zsh-snippets).
+
+Alongside pnpm and the other tool snippets, it loads [opencode.zsh](https://github.com/pmviva/zsh-snippets/blob/main/snippets/opencode.zsh), which sets `OPENCODE_HOME` to `~/.opencode` and adds `$OPENCODE_HOME/bin` to `PATH` if it is not already present.
+
 Tmux configuration:
 
 Tmux uses `Ctrl-a` as the prefix key. TPM is bootstrapped automatically when tmux starts.
